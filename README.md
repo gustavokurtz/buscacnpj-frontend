@@ -23,7 +23,7 @@ Siga estes passos para rodar o frontend em sua máquina de desenvolvimento:
 
 2.  **Clone o repositório do frontend:**
     ```bash
-    git clone [https://github.com/gustavokurtz/buscacnpj-frontend](https://github.com/gustavokurtz/buscacnpj-frontend)
+    git clone https://github.com/gustavokurtz/buscacnpj-frontend.git
     cd buscacnpj-frontend
     ```
 
