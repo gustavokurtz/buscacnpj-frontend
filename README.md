@@ -1,40 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Consulta de CNPJ | Portal Empresarial
 
-## Getting Started
+Este é o frontend de uma aplicação web para consultar informações de empresas brasileiras a partir do número do CNPJ. O sistema oferece uma interface moderna e minimalista para facilitar a busca e visualização dos dados.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Next.js:** Framework React para construção de aplicações web com renderização do lado do servidor (SSR) e roteamento fácil.
+* **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+* **Tailwind CSS:** Framework CSS utilitário para estilização rápida e responsiva.
+* **Axios:** Cliente HTTP baseado em Promises para fazer requisições à API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Executar Localmente
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Siga estes passos para rodar o frontend em sua máquina de desenvolvimento:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1.  **Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.** Você pode verificar as versões com os seguintes comandos no terminal:
+    ```bash
+    node -v
+    npm -v
+    # ou
+    yarn --version
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+2.  **Clone o repositório do frontend:**
+    ```bash
+    git clone [https://github.com/gustavokurtz/buscacnpj-frontend](https://github.com/gustavokurtz/buscacnpj-frontend)
+    cd buscacnpj-frontend
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
 
-## Learn More
+4.  **Crie um arquivo `.env.local` na raiz do projeto e adicione a URL base da API:**
+    ```
+    NEXT_PUBLIC_API_URL=http://localhost:3000
+    ```
+    Certifique-se de que o backend da API esteja rodando no endereço especificado. Você pode encontrar o repositório do backend aqui: [https://github.com/gustavokurtz/buscacnpj](https://github.com/gustavokurtz/buscacnpj).
 
-To learn more about Next.js, take a look at the following resources:
+5.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    # ou
+    yarn dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Funcionalidades Principais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Consulta por CNPJ:** Permite ao usuário inserir um número de CNPJ e buscar informações da empresa correspondente.
+* **Formatação Automática do CNPJ:** O campo de entrada formata o CNPJ automaticamente durante a digitação.
+* **Validação do CNPJ:** Verifica se o formato do CNPJ inserido é válido antes de realizar a consulta.
+* **Exibição Detalhada dos Dados:** Apresenta informações relevantes da empresa, como razão social, nome fantasia, porte, capital social, CNAE fiscal, informações de contato, endereço e quadro societário.
+* **Interface Moderna e Minimalista:** Design limpo e intuitivo para uma experiência de usuário agradável.
+* **Mensagens de Erro:** Exibe mensagens claras em caso de CNPJ inválido ou não encontrado.
+* **Animações Sutis:** Utiliza animações para melhorar a interação e a percepção do usuário.
 
-## Deploy on Vercel
+## Variáveis de Ambiente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto utiliza as seguintes variáveis de ambiente:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+* `NEXT_PUBLIC_API_URL`: A URL base da API que fornece os dados das empresas. Esta variável deve ser definida no arquivo `.env.local`.
+
+## Autor
+
+Este frontend foi desenvolvido por **Gustavo**.
