@@ -207,7 +207,7 @@ const CnpjDetails: React.FC<{ cnpjData: CnpjData }> = ({ cnpjData }) => {
 };
 
 // URL base da API
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+// const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const Home = () => {
   const [cnpj, setCnpj] = useState('');
@@ -255,7 +255,7 @@ const Home = () => {
     setCnpjData(null); // Limpa os dados anteriores
 
     try {
-      const response = await axios.get(`${API_URL}/cnpj/${cnpjNumerico}`);
+      const response = await axios.get(`https://https://buscacnpj.fly.dev/cnpj/${cnpjNumerico}`);
       setCnpjData(response.data);
     } catch (err: any) {
       if (err.response && err.response.status === 404) {
