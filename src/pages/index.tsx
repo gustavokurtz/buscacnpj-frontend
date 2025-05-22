@@ -255,7 +255,7 @@ const Home = () => {
     setCnpjData(null); // Limpa os dados anteriores
 
     try {
-      const response = await axios.get(`https://https://buscacnpj.fly.dev/cnpj/${cnpjNumerico}`);
+      const response = await axios.get(`https://buscacnpj.fly.dev/cnpj/${cnpjNumerico}`);
       setCnpjData(response.data);
     } catch (err: any) {
       if (err.response && err.response.status === 404) {
